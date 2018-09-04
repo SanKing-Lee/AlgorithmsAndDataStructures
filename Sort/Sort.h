@@ -2,6 +2,8 @@
 
 #include <iostream>
 
+const int Length = 10;
+
 using namespace std;
 
 class Sort {
@@ -14,4 +16,8 @@ public:
 	void Print();
 	void insertionSortDescend();
 	void insertionSortAscend();
+	void mergeSortDescend(int l,  int r);
+	void mergeSortAscend(int l, int r);
+	void mergeDescend(int l, int m, int r);
+	void mergeAscend(int l, int m, int r);
 };
