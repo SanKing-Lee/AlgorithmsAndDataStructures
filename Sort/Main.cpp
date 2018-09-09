@@ -2,23 +2,47 @@
 
 int main() {
 	Sort s;
-	cout << "Insertion Sort Descend: " << endl;
-	s.insertionSortDescend();
+
+	//cout << "Insertion Sort Descend: " << endl;
+	//s.Init();
+	//s.insertionSortDescend();
+	//s.Print();
+	//cout << endl;
+
+	//cout << "Insertion Sort Ascend: " << endl;
+	//s.Init();
+	//s.insertionSortAscend();
+	//s.Print();
+	//cout << endl;
+
+	//cout << "Merge Sort Descend: " << endl;
+	//s.Init();
+	//s.mergeSortDescend(0, Length-1);
+	//s.Print();
+	//cout << endl;
+
+	//cout << "Merge Sort Ascend: " << endl;
+	//s.Init();
+	//s.mergeSortAscend(0, Length-1);
+	//s.Print();
+	//cout << endl;
+
+	//cout << "Shell Sort Ascend: " << endl;
+	//s.Init();
+	//s.shellSort(Length);
+	//s.Print();
+	//cout << endl;
+
+	cout << "Quick Sort Ascend: " << endl;
+	s.Init();
+	s.quickSort(0, Length - 1);
 	s.Print();
 	cout << endl;
+
+	cout << "Quick Sort Ascend not Recursive: " << endl;
 	s.Init();
-	cout << "Insertion Sort Ascend: " << endl;
-	s.insertionSortAscend();
+	s.quickSortNotR(0, Length - 1);
 	s.Print();
 	cout << endl;
-	s.Init();
-	cout << "Merge Sort Descend: " << endl;
-	s.mergeSortDescend(0, Length-1);
-	s.Print();
-	cout << endl;
-	s.Init();
-	cout << "Merge Sort Ascend: " << endl;
-	s.mergeSortAscend(0, Length-1);
-	s.Print();
 	return 0;
 }
