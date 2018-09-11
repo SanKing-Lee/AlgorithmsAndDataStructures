@@ -33,15 +33,21 @@ int main() {
 	//s.Print();
 	//cout << endl;
 
-	cout << "Quick Sort Ascend: " << endl;
-	s.Init();
-	s.quickSort(0, Length - 1);
-	s.Print();
-	cout << endl;
+	//cout << "Quick Sort Ascend: " << endl;
+	//s.Init();
+	//s.quickSort(0, Length - 1);
+	//s.Print();
+	//cout << endl;
 
-	cout << "Quick Sort Ascend not Recursive: " << endl;
+	//cout << "Quick Sort Ascend not Recursive: " << endl;
+	//s.Init();
+	//s.quickSortNotR(0, Length - 1);
+	//s.Print();
+	//cout << endl;
+
+	cout << "Heap Sort Ascend: " << endl;
 	s.Init();
-	s.quickSortNotR(0, Length - 1);
+	s.HeapSort();
 	s.Print();
 	cout << endl;
 	return 0;

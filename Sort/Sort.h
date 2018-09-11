@@ -3,13 +3,19 @@
 #include <iostream>
 #include <stack>
 
-const int Length = 16;
+const int Length = 8;
 
 using namespace std;
 
 class Sort {
 private:
 	int* a;
+
+	//heap sort
+	//Heap size
+	int heap_size;
+	//array length
+	int array_length;
 public:
 	Sort() { };
 	~Sort() { delete a; };
@@ -30,4 +36,12 @@ public:
 	void quickSort(int left, int right);
 	int partSort(int left, int right);
 	void quickSortNotR(int left, int right);
+
+	//Heap Sort
+	int getParent(int i);
+	int getLeftChild(int i);
+	int getRightChild(int i);
+	void MaxHeapify(int i);
+	void BuildMaxHeap();
+	void HeapSort();
 };

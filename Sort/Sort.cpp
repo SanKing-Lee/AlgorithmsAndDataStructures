@@ -286,3 +286,68 @@ void Sort::quickSortNotR(int left, int right)
 		}
 	}
 }
+
+//Heap Sort
+int Sort::getParent(int i)
+{
+	return (int)floor(i / 2);
+}
+
+int Sort::getLeftChild(int i)
+{
+	if (i == 0)
+		return 1;
+	return 2 * i + 1;
+}
+
+int Sort::getRightChild(int i)
+{
+	if (i == 0)
+		return 2;
+	return 2 * i + 2;
+}
+
+void Sort::MaxHeapify(int i)
+{
+	int l = getLeftChild(i);
+	int r = getRightChild(i);
+	int Largest;
+	//get the Largest element in this child tree
+	if (l <= heap_size && a[l] > a[i]) {
+		Largest = l;
+	}
+	else
+		Largest = i;
+	if (r <= heap_size && a[r] > a[Largest])
+	{
+		Largest = r;
+	}
+	//if the largest element is not the root, swap their position and go on maxHeapify on the
+	//present largest elment
+	if (Largest != i) {
+		Swap(i, Largest);
+		MaxHeapify(Largest);
+	}
+}
+
+void Sort::BuildMaxHeap()
+{
+	heap_size = Length - 1;
+	array_length = Length - 1;
+	//march down all the root elements
+	for (int i = (int)floor(array_length / 2); i >= 0; i--) {
+		MaxHeapify(i);
+	}
+}
+
+void Sort::HeapSort()
+{
+	BuildMaxHeap();
+	Print();
+	for (int i = array_length; i >= 1; i--) {
+		Swap(i, 0);
+		heap_size--;
+		MaxHeapify(0);
+		Print();
+	}
+}
