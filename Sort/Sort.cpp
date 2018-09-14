@@ -2,12 +2,11 @@
 
 void Sort::Init()
 {
-	a = new int[Length];
 	for (int i = 0; i < Length; i++)
 	{
-		int b = rand() % 30;
-		a[i] = b;
-		cout << b << " ";
+		a[i] = rand() % UpBound;
+
+		cout <<a[i] << " ";
 	}
 	cout << endl;
 }
@@ -349,5 +348,34 @@ void Sort::HeapSort()
 		heap_size--;
 		MaxHeapify(0);
 		Print();
+	}
+}
+
+void Sort::countSort()
+{
+	int b[Length];
+	int c[UpBound]; 
+	//initial the c array
+	for (int i = 0; i < UpBound; i++)
+	{
+		c[i] = 0;
+	}
+
+	for (int i = 0; i < Length; i++)
+	{
+		c[a[i]]++;
+	}
+	for (int i = 1; i < UpBound; i++) {
+		c[i] = c[i] + c[i - 1];
+	}
+	for (int i = 0; i < Length; i++)
+	{
+		//此处与书上的伪代码不一致，因为书上的数组是从1开始的
+		c[a[i]]--;
+		b[c[a[i]]] = a[i];
+	}
+	for (int i = 0; i < Length; i++)
+	{
+		a[i] = b[i];
 	}
 }

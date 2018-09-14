@@ -45,9 +45,15 @@ int main() {
 	//s.Print();
 	//cout << endl;
 
-	cout << "Heap Sort Ascend: " << endl;
+	//cout << "Heap Sort Ascend: " << endl;
+	//s.Init();
+	//s.HeapSort();
+	//s.Print();
+	//cout << endl;
+
+	cout << "Counting Sort Ascend: " << endl;
 	s.Init();
-	s.HeapSort();
+	s.countSort();
 	s.Print();
 	cout << endl;
 	return 0;

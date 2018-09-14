@@ -4,12 +4,13 @@
 #include <stack>
 
 const int Length = 8;
+const int UpBound = 20;
 
 using namespace std;
 
 class Sort {
 private:
-	int* a;
+	int a[Length];
 
 	//heap sort
 	//Heap size
@@ -18,21 +19,30 @@ private:
 	int array_length;
 public:
 	Sort() { };
-	~Sort() { delete a; };
+	~Sort() {  };
 	//initialize the array
 	void Init();
 	//print the array
 	void Print();
 	//swap positions of two element
 	void Swap(int l, int r);
+	//get the largest number
+
+	//insertion Sort
 	void insertionSortDescend();
 	void insertionSortAscend();
+
+	//merge Sort
 	void mergeSortDescend(int l,  int r);
 	void mergeSortAscend(int l, int r);
 	void mergeDescend(int l, int m, int r);
 	void mergeAscend(int l, int m, int r);
+
+	//Shell Sort
 	void shellInsert(int n, int incree);
 	void shellSort(int n);
+
+	//Quick Sort
 	void quickSort(int left, int right);
 	int partSort(int left, int right);
 	void quickSortNotR(int left, int right);
@@ -44,4 +54,7 @@ public:
 	void MaxHeapify(int i);
 	void BuildMaxHeap();
 	void HeapSort();
+
+	//Count Sort
+	void countSort();
 };
