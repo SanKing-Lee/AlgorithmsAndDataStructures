@@ -1,12 +1,16 @@
 # depslib dependency file v1.0
-1537438970 source:d:\repositories\introductiontoalgorithms\sort\main.cpp
+1537881119 source:d:\repositories\introductiontoalgorithms\sort\main.cpp
 	"Sort.h"
 
-1537441523 d:\repositories\introductiontoalgorithms\sort\sort.h
+1537957689 d:\repositories\introductiontoalgorithms\sort\sort.h
 	<iostream>
 	<stack>
 	<cmath>
+	<vector>
+	<algorithm>
+	<list>
+	<iterator>
 
-1537712859 source:d:\repositories\introductiontoalgorithms\sort\sort.cpp
+1538041050 source:d:\repositories\introductiontoalgorithms\sort\sort.cpp
 	"Sort.h"
 

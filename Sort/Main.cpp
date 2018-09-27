@@ -62,5 +62,11 @@ int main() {
     s.radixSort();
     s.Print();
     cout << endl;
+
+    cout << "Bucket Sort Ascend: " <<endl;
+    s.Init();
+    s.bucketSort();
+    s.Print();
+    cout <<endl;
     return 0;
 }

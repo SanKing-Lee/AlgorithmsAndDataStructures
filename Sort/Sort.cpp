@@ -404,3 +404,40 @@ void Sort::countSortforRadixSort(int d) {
     }
     Print();
 }
+
+void Sort::bucketSort() {
+    //build the bucket via lists
+    //the list of bucket pointers
+    int counter = 0;
+    vector<vector<int>> pBuckets(8);
+
+    //get the max value and the min value in the array
+    int AMax, AMin;
+    AMax = a[0];
+    AMin = a[0];
+    for(int i = 0; i < Length; i++) {
+        AMax = max(AMax, a[i]);
+        AMin = min(AMin, a[i]);
+    }
+    cout << "ArrayMax: " << AMax << endl;
+    cout << "ArrayMin:" << AMin << endl;
+
+    //push the elements to buckets
+    for(int i =0 ; i < Length; i++){
+        int index = (int)(a[i]/10);
+        pBuckets[index].push_back(a[i]);
+    }
+
+    //sort in the bucket
+    for (int i = 0; i < Length ;i++){
+        std::sort(pBuckets[i].begin(), pBuckets[i].end(), [](int a, int b){return a < b;});
+    }
+
+    //merge the buckets
+    int j = 0;
+    for(auto bucket : pBuckets){
+        for(auto element:bucket){
+            a[j++] = element;
+        }
+    }
+}

@@ -3,6 +3,10 @@
 #include <iostream>
 #include <stack>
 #include <cmath>
+#include <vector>
+#include <algorithm>
+#include <list>
+#include <iterator>
 
 const int Length = 8;
 const int UpBound = 20;
@@ -63,4 +67,7 @@ public:
     //Radix Sort
     void radixSort();
     void countSortforRadixSort(int d);
+
+    //Bucket Sort
+    void bucketSort();
 };
