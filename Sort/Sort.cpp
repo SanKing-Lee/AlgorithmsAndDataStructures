@@ -423,20 +423,22 @@ void Sort::bucketSort() {
     cout << "ArrayMin:" << AMin << endl;
 
     //push the elements to buckets
-    for(int i =0 ; i < Length; i++){
+    for(int i =0 ; i < Length; i++) {
         int index = (int)(a[i]/10);
         pBuckets[index].push_back(a[i]);
     }
 
     //sort in the bucket
-    for (int i = 0; i < Length ;i++){
-        std::sort(pBuckets[i].begin(), pBuckets[i].end(), [](int a, int b){return a < b;});
+    for (int i = 0; i < Length ; i++) {
+        std::sort(pBuckets[i].begin(), pBuckets[i].end(), [](int a, int b) {
+            return a < b;
+        });
     }
 
     //merge the buckets
     int j = 0;
-    for(auto bucket : pBuckets){
-        for(auto element:bucket){
+    for(auto bucket : pBuckets) {
+        for(auto element:bucket) {
             a[j++] = element;
         }
     }

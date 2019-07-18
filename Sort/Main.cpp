@@ -8,6 +8,7 @@ int main() {
     s.insertionSortDescend();
     s.Print();
     cout << endl;
+    cout << endl;
 
     cout << "Insertion Sort Ascend: " << endl;
     s.Init();
