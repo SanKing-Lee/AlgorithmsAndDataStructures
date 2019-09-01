@@ -2,7 +2,6 @@
 
 Graph::Graph(int numVert)
 {
-    // 初始化图
     Init(numVert);
 }
 
@@ -58,16 +57,13 @@ int Graph::GetEdgeNum()
 
 int Graph::GetFirstNeighbor(int v)
 {
-    // 遍历查找第一个与v相连的结点
     for (int i = 0; i < m_numVertex; i++)
     {
-        // 找到了，返回该结点
         if (m_matrix[v][i] != 0)
         {
             return i;
         }
     }
-    // 没找到，返回n
     return m_numVertex;
 }
 
@@ -85,7 +81,6 @@ int Graph::GetNextNeighbor(int v, int w)
 
 void Graph::SetEdge(int v1, int v2, int wt)
 {
-    // 如果原边权值为1，说明新增了边
     if (m_matrix[v1][v2] == 0)
     {
         m_numEdge++;

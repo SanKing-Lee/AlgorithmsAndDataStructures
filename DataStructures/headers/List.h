@@ -133,8 +133,3 @@ public:
         return listArray[curr];
     }
 };
-
-template <typename E>
-class LList{
-
-};
