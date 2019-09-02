@@ -1,18 +1,25 @@
 #pragma once
 #include <iostream>
+#include <fstream>
 #include <vector>
 #include <queue>
 #include <stack>
+#include <string>
 
-using std::vector;
 using std::cout;
 using std::endl;
+using std::ifstream;
+using std::ofstream;
+using std::vector;
 using std::queue;
 using std::stack;
+using std::string;
 
 const static int NUM_OF_VERTEX = 8;
 const static int VISITED = 1;
 const static int UNVISITED = 0;
+
+const static int OPEN_FILE_FAILED = -1;
 
 class Graph
 {
@@ -21,6 +28,8 @@ public:
     ~Graph();
     
     void Init(int n);
+
+    int InitFromFile(const string &filename);
     
     int GetVertexNum();
 
