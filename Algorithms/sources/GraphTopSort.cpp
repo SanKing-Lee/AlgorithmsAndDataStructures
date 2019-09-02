@@ -136,7 +136,7 @@ void QueueTopSort(Graph *g)
 void TestGraphTopSort()
 {
     Graph *g = new Graph(7);
-    g->InitFromFile("./Algorithms/cfg/TestGraphTopSortEdges.txt");
+    g->InitFromFile("./Algorithms/config/TestGraphTopSortEdges.txt");
     // RecurssiveTopSort(g);
     // StackTopSort(g);
     QueueTopSort(g);
