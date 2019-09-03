@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _DATASTRUCTURES_GRAPH_H
+#define _DATASTRUCTURES_GRAPH_H
 #include <iostream>
 #include <fstream>
 #include <vector>
@@ -18,8 +19,10 @@ using std::string;
 const static int NUM_OF_VERTEX = 8;
 const static int VISITED = 1;
 const static int UNVISITED = 0;
+const static int UNREACHABLE = __INT_MAX__;
 
 const static int OPEN_FILE_FAILED = -1;
+
 
 class Graph
 {
@@ -58,3 +61,5 @@ private:
     int **m_matrix;   
     int *m_mark;        
 };
+
+#endif

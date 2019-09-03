@@ -1,23 +1,25 @@
 #include "Graph.h"
 
 /**
- * @brief 递归进行拓扑排序
+ * @brief   递归进行拓扑排序，对每个点利用深度优先算法遍历它的依赖项，
+ *          当所有的依赖项（邻居以及邻居的邻居）遍历完成，则该事件也可以完成了
  * @param [in] g: 图结构体指针
  */
 static void RecurssiveTopSort(Graph *g);
 /**
- * @brief 递归拓扑排序的辅助函数
+ * @brief 递归拓扑排序的辅助函数，在深度遍历的过程中不断地查找依赖项，所有依赖项完成后，输出当前结点
  * @param [in] g: 图结构体指针
  * @param [in] v: 图结点 
  */
 static void RecurssiveTopSortHelp(Graph *g, int v);
 /**
- * @brief 利用栈进行非递归的拓扑排序
+ * @brief 利用栈进行非递归的拓扑排序，把初始点压入栈中，并设置它的标记为VISITED，
+ *      寻找它的依赖项（邻居），把依赖项压入栈中，当它的所有依赖项完成了，也即所有邻居完成了，栈顶即为该结点
  * @param [in] g: 图指针
  */
 static void StackTopSort(Graph *g);
 /**
- * @brief 利用队列进行拓扑排序
+ * @brief 利用队列进行拓扑排序，计算每个结点的依赖项个数，如果依赖项个数为0，则可出队
  * @param [in] g: 图指针
  */
 static void QueueTopSort(Graph *g);

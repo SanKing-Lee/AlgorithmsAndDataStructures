@@ -16,11 +16,15 @@ LINKFLAGS =
 # 本地路径（当前目录）
 LOCAL_PATH = .
 # 编译文件的路径
-SRCDIR = Algorithms/sources DataStructures/sources .
+SRCDIR = .
+SRCDIR += Algorithms/sources/Graph
+SRCDIR += Algorithms/sources/Sort
+SRCDIR += DataStructures/sources/Graph
 
 # 增加include文件路径
-INCLUDES += -I$(LOCAL_PATH)/Algorithms/headers
-INCLUDES += -I$(LOCAL_PATH)/DataStructures/headers
+INCLUDES += -I$(LOCAL_PATH)/Algorithms/headers/Sort
+INCLUDES += -I$(LOCAL_PATH)/DataStructures/headers/Graph
+INCLUDES += -I$(LOCAL_PATH)/DataStructures/headers/List
 # INCLUDES += -I/usr/include
 
 # C程序
