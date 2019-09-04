@@ -11,6 +11,8 @@
         - 2018.9.4&emsp;合并排序
         - 2018.9.3&emsp;插入排序
 2. **sources&emsp;源文件**
+    - MinCostSpanTree.cpp&emsp;图的最小生成树算法
+        - 2019.9.4&emsp;Prim算法
     - SingleSourceShortestPath.cpp&emsp;图的单源最短路径算法
         - 2019.9.3&emsp;Djikestra算法
     - GraphTopSort.cpp&emsp;图的拓扑排序算法
@@ -23,6 +25,8 @@
     - Sort.cpp&emsp;各个排序函数的实现
 3. **config&emsp;配置文件**&emsp;用于某些函数的配置文件
     - 2019.9.2&emsp;TestGraphTopSortEdges.txt &emsp;构建图的边数据存储，用于测试图的拓扑排序算法
+    - 2019.9.3&emsp;TestSSSPEdge.txt&emsp;用于测试图的最短路径算法
+    - 2019.9.4&emsp;TestMSTEdge.txt&emsp;用于测试图的最小生成树算法
 ## DataStructures
 1. **headers&emsp;头文件**
     - 2019.8.27&emsp;Graph.h&emsp;图的定义

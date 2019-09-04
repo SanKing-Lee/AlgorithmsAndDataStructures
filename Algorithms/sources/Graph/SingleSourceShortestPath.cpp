@@ -1,8 +1,24 @@
 #include "Graph.h"
 
+/**
+ * @brief Dijkestra算法，找到最近的邻居点v，更新源点s到v的所有邻居点w的距离，遍历所有点
+ * @param [out] g: 图指针
+ * @param [out] D: 距离数组
+ * @param [in] s: 源点
+ */
 static void Dijkestra(Graph *g, int *D, int s);
-static int MinVertex(Graph *g, int *D);
 
+/**
+ * @brief 获取到源点距离最近的邻居点
+ * @param [out] g: 图指针
+ * @param [out] D: 距离数组
+ * @return 最近的点
+ */
+int MinVertex(Graph *g, int *D);
+
+/**
+ * @brief 测试最短路径算法
+ */
 void TestSSSP();
 
 void Dijkestra(Graph *g, int *D, int s)
@@ -18,7 +34,6 @@ void Dijkestra(Graph *g, int *D, int s)
     {
         // 获取s的未访问的最近邻居
         int v = MinVertex(g, D);
-        cout << "min vertex: " << v << endl;
         // 如果不存在邻居
         if (D[v] == UNREACHABLE)
         {
