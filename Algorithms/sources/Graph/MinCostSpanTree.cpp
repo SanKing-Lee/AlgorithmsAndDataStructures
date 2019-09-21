@@ -4,6 +4,22 @@ extern int MinVertex(Graph *g, int *D);
 
 static void Prim(Graph *g, int *D, int *Path, int s);
 
+class DijElem
+{
+public:
+    DijElem(){};
+    DijElem(int f, int t, int w) : from(f), to(t), weight(w){};
+    ~DijElem(){};
+
+    int from;
+    int to;
+    int weight;
+};
+
+static void Kruskal(Graph *g, DijElem *mst);
+
+static bool Compare(const DijElem *elem1, const DijElem *elem2);
+
 void TestMST();
 
 void Prim(Graph *g, int *D, int *Path, int s)
@@ -37,6 +53,17 @@ void Prim(Graph *g, int *D, int *Path, int s)
             }
         }
     }
+}
+
+void Kruskal(Graph *g, DijElem *mst)
+{
+    queue<DijElem> edges;
+    
+}
+
+bool Compare(const DijElem *elem1, DijElem *elem2)
+{
+    return elem1->weight > elem2->weight;
 }
 
 void TestMST()

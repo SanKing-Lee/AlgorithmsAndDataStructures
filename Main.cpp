@@ -1,5 +1,6 @@
 #include "Sort.h"
 #include "Graph.h"
+#include <array>
 
 extern void TestGraphTraverse();
 extern void TestGraphTopSort();
@@ -15,5 +16,4 @@ int main(){
     // TestSSSP();
     cout << "Test MST: \n";
     TestMST();
-    return 0;
 }
